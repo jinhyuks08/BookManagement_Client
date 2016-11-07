@@ -14,73 +14,152 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- Custom styles for this template -->
-    <link href="../CSS/list.css" rel="stylesheet">
-    <script src="../JS/list.js"></script>
+    <link href="../CSS/search.css" rel="stylesheet">
+    <script src="../JS/search.js"></script>
 </head>
-<!-- NAVBAR
-================================================== -->
 <body>
-<div class="navbar-wrapper">
-    <div class="container">
-        <nav class="navbar navbar-inverse navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html">Book Management System</a>
+<!--------------------------------------------------------------------------------------------------------------->
+
+<!--------------------------------------------------------------------------------------------------------------->
+<div class="container marketing">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Book Management System</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <!--------------------------------------------------------------------------------------------------------------->
+                    <li><a href="#" id="button_login" data-target="#myModal" type="button" data-toggle="modal">Login</a></li>
+                    <!--------------------------------------------------------------------------------------------------------------->
+                    <li class="Search">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Search <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header">For Text</li>
+                            <li><a href="search_title.html">&nbsp;&nbsp;&nbsp;&nbsp;Title</a></li>
+                            <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;Author</a></li>
+                            <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;Translator</a></li>
+                            <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;Publisher</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">For Code</li>
+                            <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;ISBN</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">Nav header</li>
+                            <li><a href="#">Separated link</a></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="add.html">ADD</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <div id="logging"></div>
+            </div>
+        </div>
+    </nav>
+
+    <h1>Registering New Book's Infomation</h1>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Fill out the form below.
                 </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="search_title.html">Search</a></li>
-                        <li><a href="list.html">List</a></li>
-                        <li><a href="http://getbootstrap.com/examples/carousel/#contact">Contact</a></li>
-                        <li class="dropdown">
-                            <a href="http://getbootstrap.com/examples/carousel/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="http://getbootstrap.com/examples/carousel/#">Action</a></li>
-                                <li><a href="http://getbootstrap.com/examples/carousel/#">Another action</a></li>
-                                <li><a href="http://getbootstrap.com/examples/carousel/#">Something else here</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li class="dropdown-header">Nav header</li>
-                                <li><a href="http://getbootstrap.com/examples/carousel/#">Separated link</a></li>
-                                <li><a href="http://getbootstrap.com/examples/carousel/#">One more separated link</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <form role="form">
+                                <h2>Cover Image</h2>
+                                <form id="form1" runat="server">
+                                    <center>
+                                        <img id="blah" src="#" alt="your image" width="400" height="550"/><br>
+                                    </center>
+                                    <label class="control-label">Choice Cover Image</label>
+                                    <input type='file' id="imgInp" />
+                                    <br>
+                                </form>
+                            </form>
+                        </div>
+                        <!-- /.col-lg-6 (nested) -->
+                        <div class="col-lg-6">
+                            <form role="form">
+                                <div class="insdata">
+                                    <h2>Information</h2>
+                                    <label class="control-label">*ISBN No.#</label>
+                                    <input type="text" class="form-control" id="isbn" placeholder="*ISBN을 입력하세요." />
+                                    <label class="control-label">Title</label>
+                                    <input type="text" class="form-control" id="title" placeholder="제목을 입력하세요." />
+                                    <label class="control-label">Date</label>
+                                    <input type="text" class="form-control" id="date" placeholder="출판일을 입력하세요." />
+                                    <label class="control-label">*Page</label>
+                                    <input type="text" class="form-control" id="page"  placeholder="총 페이지수를 입력하세요." />
+                                    <label class="control-label">*Price</label>
+                                    <input type="text" class="form-control" id="price" placeholder="*가격을 입력하세요." />
+                                    <label class="control-label">Author</label>
+                                    <input type="text" class="form-control" id="author" placeholder="저자를 입력하세요." />
+                                    <label class="control-label">Translator</label>
+                                    <input type="text" class="form-control" id="translator" placeholder="번역자를 입력하세요." />
+                                    <label class="control-label">Supplement</label>
+                                    <input type="text" class="form-control" id="supplement"  placeholder="구성품을 입력하세요." />
+                                    <label class="control-label">Publisher</label>
+                                    <input type="text" class="form-control" id="publisher" placeholder="출판사를 입력하세요." />
+                                </div>
+                            </form>
+                        </div>
+                        <!-- /.col-lg-6 (nested) -->
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.panel-body -->
+                <center>
+                    <input id="wrapper" type="button" value="Let's Register!" onclick="myInsert()">
+                </center>
+                <br>
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+</div>
+</div>
+</div>
+</div>
+<!--B-- Modal window ---->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="myModalLabel">Login</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="username">아이디</label>
+                    <input name="user_id" value='' id="username" placeholder="Username" type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="password">비밀번호</label>
+                    <input name="password" id="password" value='' placeholder="Password" type="password" class="form-control" />
+                </div>
+                <!---->
+                <div class="form-group">
+                    <input type="button" id="loginbtn" class="btn btn-default btn-login-submit btn-block m-t-md" value="Login" onclick="myLogin()"/>
+                </div>
+                <div class="form-group">
+                    <a href="createuser.html" class="btn btn-default btn-block m-t-md"> 회원가입</a>
                 </div>
             </div>
-        </nav>
-        <h2 class="sub-header">Book List (Search For 'Title') </h2>
-        <div class="table-responsive">
-            <table class="table table-striped">
-                <thead>
-                <tr>
-                    <th>Image</th>
-                    <th>Title</th>
-                    <th>Author</th>
-                    <th><a href="#" onclick="mySort()">Price</a></th>
-                    <th>Update</th>
-                    <th>Delete</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td id="img"><img width="80" /></td>
-                    <td id="title"></td>
-                    <td id="author"></td>
-                    <td id="price"></td>
-                    <td id="update"></td>
-                    <td id="delete"></td>
-                </tr>
-                </tbody>
-            </table>
+            <div class="modal-footer">
+                <button type="button" id ="" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
         </div>
     </div>
 </div>
-
+<!--E-- Modal window ---->
 </body>
 </html>

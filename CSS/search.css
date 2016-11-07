@@ -103,3 +103,73 @@ body {
     display: inline-block;
     border-radius: 50%;
 }
+
+
+/* padding left and right is for search and reset icons */
+.slinput input {
+    padding:10px;
+    width:100%;
+    border:1px solid #ccc;
+    padding-left:31px;
+    padding-right:30px;
+    color:black;
+    font-family: arial,sans-serif;
+    font-size: 16px;
+}
+/* Remove IE10's “clear field” X button */
+.slinput input::-ms-clear {
+    display: none;
+}
+.slinput input:focus {
+    border:1px solid #4d90fe;
+}
+
+/* left side icon style (search icon) */
+.slinput .left-icon {
+    position:absolute;
+    left:10px;
+    top:11px;
+}
+.slinput .fa {
+    color:#444;
+    font-size: 16px;
+}
+.slinput .fa-close {
+    color:#ccc;
+}
+
+.slinput .active {
+    color:#555;
+}
+
+/* right side icon style (search icon) */
+.slinput .right-icon {
+    position:absolute;
+    right:10px;
+    top:11px;
+    cursor:pointer;
+}
+
+.slinput {
+    position:relative;
+    width:100%;
+}
+
+#wrapper{
+    width:500px;
+    height: 70px;
+    margin: auto;
+    font-weight: bold;
+    font-size: 30pt;
+}
+
+#logging{
+    position: fixed;
+    right:70px;
+    top: 15px;
+    color: white;
+    overflow: auto;
+}
+ #button_login{
+     overflow: auto;
+ }

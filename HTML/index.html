@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>Book Management System</title>
@@ -7,202 +8,179 @@
             src="https://code.jquery.com/jquery-2.2.4.min.js"
             integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
             crossorigin="anonymous"></script>
-<!-- Latest compiled and minified CSS -->
+    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<!-- Optional theme -->
+    <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-<!-- Latest compiled and minified JavaScript -->
+    <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<!-- Custom styles for this template -->
-    <link href="../CSS/index.css" rel="stylesheet">
-    <script src="../JS/index.js"></script>
+    <!-- Custom styles for this template -->
+    <link href="../CSS/search.css" rel="stylesheet">
+    <script src="../JS/search.js"></script>
 </head>
-<!-- NAVBAR
-================================================== -->
+
 <body>
-<div class="navbar-wrapper">
-    <div class="container">
-
-        <nav class="navbar navbar-inverse navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html">Book Management System</a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="search.html">Search</a></li>
-                        <li><a href="list.html">List</a></li>
-                        <li><a href="http://getbootstrap.com/examples/carousel/#contact">Contact</a></li>
-                        <li class="dropdown">
-                            <a href="http://getbootstrap.com/examples/carousel/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="http://getbootstrap.com/examples/carousel/#">Action</a></li>
-                                <li><a href="http://getbootstrap.com/examples/carousel/#">Another action</a></li>
-                                <li><a href="http://getbootstrap.com/examples/carousel/#">Something else here</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li class="dropdown-header">Nav header</li>
-                                <li><a href="http://getbootstrap.com/examples/carousel/#">Separated link</a></li>
-                                <li><a href="http://getbootstrap.com/examples/carousel/#">One more separated link</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-    </div>
-</div>
-
-<!-- Carousel
-================================================== -->
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class=""></li>
-        <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="2" class=""></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-        <div class="item">
-            <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
-            <div class="container">
-                <div class="carousel-caption">
-                    <h1>Example headline.</h1>
-                    <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-                    <p><a class="btn btn-lg btn-primary" href="http://getbootstrap.com/examples/carousel/#" role="button">Sign up today</a></p>
-                </div>
-            </div>
-        </div>
-        <div class="item active">
-            <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
-            <div class="container">
-                <div class="carousel-caption">
-                    <h1>Another example headline.</h1>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                    <p><a class="btn btn-lg btn-primary" href="http://getbootstrap.com/examples/carousel/#" role="button">Learn more</a></p>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
-            <div class="container">
-                <div class="carousel-caption">
-                    <h1>One more for good measure.</h1>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                    <p><a class="btn btn-lg btn-primary" href="http://getbootstrap.com/examples/carousel/#" role="button">Browse gallery</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <a class="left carousel-control" href="http://getbootstrap.com/examples/carousel/#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="http://getbootstrap.com/examples/carousel/#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div><!-- /.carousel -->
-
-
-<!-- Marketing messaging and featurettes
-================================================== -->
-<!-- Wrap the rest of the page in another container to center all the content. -->
-
 <div class="container marketing">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Book Management System</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <!--------------------------------------------------------------------------------------------------------------->
+                    <li><a href="#" id="button_login" data-target="#myModal" type="button"  data-toggle="modal">Login</a></li>
+                    <!--------------------------------------------------------------------------------------------------------------->
+                    <li class="Search">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Search <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header">For Text</li>
+                            <li><a href="search_title.html">&nbsp;&nbsp;&nbsp;&nbsp;Title</a></li>
+                            <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;Author</a></li>
+                            <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;Translator</a></li>
+                            <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;Publisher</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">For Code</li>
+                            <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;ISBN</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">Nav header</li>
+                            <li><a href="#">Separated link</a></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="add.html">ADD</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <div id="logging"></div>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <!-- Three columns of text below the carousel -->
-    <div class="row">
-        <div class="col-lg-4">
-            <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-            <p><a class="btn btn-default" href="http://getbootstrap.com/examples/carousel/#" role="button">View details »</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-            <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Heading</h2>
-            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-            <p><a class="btn btn-default" href="http://getbootstrap.com/examples/carousel/#" role="button">View details »</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-            <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a class="btn btn-default" href="http://getbootstrap.com/examples/carousel/#" role="button">View details »</a></p>
-        </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+    <div class="container marketing">
+        <br><br>
+        <div class="row">
+            <h1>Recommendation Books</h1>
+            <hr>
+            <div class="col-lg-4">
+                <center>
+                    <img class="img-circle" src="http://t1.daumcdn.net/book/KOR9788994120232?moddttm=20161103074844"
+                         alt="Generic placeholder image" width="200" height="200">
+                    <br>
+                    <h4>경제학자의 인문학서재 - 박정호</h4>
+                    <h6>&nbsp;&nbsp;&nbsp;&nbsp;그들은 어떻게 인문학에서 경제를 읽어내는가</h6>
+                </center>
+                <p>『경제학자의 인문학서재』는 역사, 문학, 철학 등 인간의 삶을 반영하는 인문학에 숨겨진 다양하고 재미있는 경제원리를 밝혀낸 책이다. 경제학자의 프레임으로 인문학을 해석한 이 책은 가상의 젊은 경제학자가 다양한 인문학적 소재들을 바탕으로 경제용어와 원리들을 설명한다. 우리 역사의 시초인 단군신화 속에서는 백성들의 경제문제를 해결하기 위한 고민들을 발견하고, 해리포터의 마법부에서는 흥미로운 경제원리 등을 살펴본다.</p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <center>
+                    <img class="img-circle" src="http://t1.daumcdn.net/book/KOR9788998756468?moddttm=20161101024233"
+                         alt="Generic placeholder image" width="200" height="200">
+                    <br>
+                    <h4>데이터베이스 관리와 실습 - 손광수</h4>
+                    <h6>&nbsp;&nbsp;&nbsp;&nbsp;MS SQL Server 2008</h6>
+                </center>
+                <p>『데이터베이스 관리와 실습』은 데이터베이스를 자유자재로 다루고 관리하기 위해 알아야 할 모든 것을 예제를 중심으로 배울 수 있는 책이다. 데이터베이스를 처음 접하는 이들을 위해 데이터베이스의 개념을 짚어준 후 표준 SQL, T-SQL에 대해 순차적으로 소개한다. 꼭 알아야 할 기능을 선별하여 설명하므로 입문자들의 학습 부담을 줄였다. 책의 마지막에는 학생들이 현업에 나가서 실전 프로젝트를 직접 수행할 수 있도록 실전용 데이터베이스 구축 및 프로그래밍 기법에 관한 구체적인 절차를 소개했다.</p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <center>
+                    <img class="img-circle" src="http://t1.daumcdn.net/book/KOR9788979148510?moddttm=20161008060448"
+                         alt="Generic placeholder image" width="200" height="200">
+                    <br>
+                    <h4>뇌를 자극하는 C# 4.0 프로그래밍</h4>
+                    <h6>&nbsp;&nbsp;&nbsp;&nbsp; </h6>
+                </center>
+                <p>C# 언어의 탄생 배경부터 상세한 입문 과정까지 C#을 잘 설명해 주고 있다. 또한 문법 설명에만 치중하지 않고 프로그램의 동작원리도 충실하게 설명한다. 이 책의 장점은 이것만이 아니다. C# 프로그램이 수행될 때 밑단에서 돌아가는 닷넷 프레임워크를 상세히 설명하며 이론을 설명한 후에는 반드시 예제 코드로 직접 실습할 수 있게 배려했다.</p>
+            </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
 
+<!-- START THE FEATURETTES -->
+        <hr class="featurette-divider">
+        <div class="row featurette">
+            <h1>Upcoming Books</h1>
+            <hr>
+            <div class="col-md-7">
+                <h2 class="featurette-heading">설민석의 조선왕조실록 <br><span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;한국이 선택한 역사 이야기</span></h2><br>
+                <p class="lead">책은 실록에 등장하는 왕의 목소리를 현대어로 풀어써 당시의 정책과 주요 사건들이 일어난 배경을 명확히 이해하는 데 도움이 될 뿐만 아니라, 질의응답을 중간에 구성하여 마치 바로 앞에서 강연을 듣고 있다는 느낌을 들게 한다. 자연스레 역사 속 사건들이 하나씩 이해되고, 엉망으로 기억되었던 얕은 국사 지식의 파편들이 차분히 정리된다. </p>
+            </div>
+            <div class="col-md-5">
+                <img class="featurette-image img-responsive center-block"  alt="300x300" src="http://t1.daumcdn.net/book/KOR9788933870693?moddttm=20161104052232;" data-holder-rendered="true" width="300" height="300">
+            </div>
+        </div>
 
-    <!-- START THE FEATURETTES -->
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 col-md-push-5">
+                <h2 class="featurette-heading">숨결이 바람 될 때 <br><span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;서른여섯 젊은 의사의 마지막 순간</span></h2><br>
+                <p class="lead">서른여섯 젊은 의사가 남긴 2년 간의 기록. <br><br>
+                    &nbsp;서른여섯, 전문의를 앞둔 신경외과 레지던트 마지막 해. 하루 열네 시간씩 이어지는 혹독한 수련 생활 끝에 원하는 삶이 손에 잡힐 것 같던 바로 그때 맞닥뜨린 폐암 4기 판정. 『숨결이 바람 될 때』는 신경외과 의사로서 치명적인 뇌 손상 환자들을 치료하며 죽음과 싸우던 저자가 자신도 폐암 말기 판정을 받고 죽음을 마주하게 된 마지막 2년의 기록을 담은 책이다.<br></p>
+            </div>
+            <div class="col-md-5 col-md-pull-7">
+                <img class="featurette-image img-responsive center-block" alt="300x300" src="http://t1.daumcdn.net/book/KOR9788965961956?moddttm=20161104052232" data-holder-rendered="true" width="300" height="300">
+            </div>
+        </div>
+    </div>
 
     <hr class="featurette-divider">
-
     <div class="row featurette">
         <div class="col-md-7">
-            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <h2 class="featurette-heading">미움받을 용기 <br><span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;자유롭고 행복한 삶을 위한 아들러의 가르침</span></h2><br>
+            <p class="lead">심리학 제3의 거장 ‘아들러’, 용기의 심리학을 이야기하다! <br><br>
+                &nbsp;첫 번째 밤부터 다섯 번째 밤까지의 순서로 진행되는 동안 철학자와 청년의 대화는 점점 긴장감을 불러일으키며 재미를 더한다. 특히 철학자의 주장에 이어지는 청년의 반박은 공감대를 한껏 불러일으킨다. 여기에 시대를 읽는 유쾌한 문화심리학자이자 《남자의 자격》, 《에디톨로지》의 저자 김정운 교수가 감수를 맡아 내용의 깊이까지 더해졌다.<br></p>
+
         </div>
         <div class="col-md-5">
-            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzUwMHg1MDAvYXV0bwpDcmVhdGVkIHdpdGggSG9sZGVyLmpzIDIuNi4wLgpMZWFybiBtb3JlIGF0IGh0dHA6Ly9ob2xkZXJqcy5jb20KKGMpIDIwMTItMjAxNSBJdmFuIE1hbG9waW5za3kgLSBodHRwOi8vaW1za3kuY28KLS0+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48IVtDREFUQVsjaG9sZGVyXzE1ODFlYjJkZTNjIHRleHQgeyBmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MjVwdCB9IF1dPjwvc3R5bGU+PC9kZWZzPjxnIGlkPSJob2xkZXJfMTU4MWViMmRlM2MiPjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjRUVFRUVFIi8+PGc+PHRleHQgeD0iMTg1LjE0MDYyNSIgeT0iMjYwLjk5Njg3NSI+NTAweDUwMDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true">
+            <img class="featurette-image img-responsive center-block" alt="300x300" src="http://t1.daumcdn.net/book/KOR9788996991342?moddttm=20161104052232" data-holder-rendered="true"width="300" height="300">
         </div>
     </div>
 
     <hr class="featurette-divider">
 
-    <div class="row featurette">
-        <div class="col-md-7 col-md-push-5">
-            <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5 col-md-pull-7">
-            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzUwMHg1MDAvYXV0bwpDcmVhdGVkIHdpdGggSG9sZGVyLmpzIDIuNi4wLgpMZWFybiBtb3JlIGF0IGh0dHA6Ly9ob2xkZXJqcy5jb20KKGMpIDIwMTItMjAxNSBJdmFuIE1hbG9waW5za3kgLSBodHRwOi8vaW1za3kuY28KLS0+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48IVtDREFUQVsjaG9sZGVyXzE1ODFlYjMyYjEwIHRleHQgeyBmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MjVwdCB9IF1dPjwvc3R5bGU+PC9kZWZzPjxnIGlkPSJob2xkZXJfMTU4MWViMzJiMTAiPjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjRUVFRUVFIi8+PGc+PHRleHQgeD0iMTg1LjE0MDYyNSIgeT0iMjYwLjk5Njg3NSI+NTAweDUwMDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true">
+<!--B-- Modal window ---->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Login</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="username">아이디</label>
+                        <input type="text"      name="user_id" id="username" value='' placeholder="Username" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="password">비밀번호</label>
+                        <input type="password"  name="password" id="password" value='' placeholder="Password" class="form-control" />
+                    </div>
+                    <!---->
+                    <div class="form-group">
+                        <input type="button" id="loginbtn" class="btn btn-default btn-login-submit btn-block m-t-md" value="Login" onclick="myLogin()"/>
+                    </div>
+                    <div class="form-group">
+                        <a href="createuser.html" class="btn btn-default btn-block m-t-md"> 회원가입</a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
     </div>
+<!--E-- Modal window ---->
 
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzUwMHg1MDAvYXV0bwpDcmVhdGVkIHdpdGggSG9sZGVyLmpzIDIuNi4wLgpMZWFybiBtb3JlIGF0IGh0dHA6Ly9ob2xkZXJqcy5jb20KKGMpIDIwMTItMjAxNSBJdmFuIE1hbG9waW5za3kgLSBodHRwOi8vaW1za3kuY28KLS0+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48IVtDREFUQVsjaG9sZGVyXzE1ODFlYjJmYjkwIHRleHQgeyBmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MjVwdCB9IF1dPjwvc3R5bGU+PC9kZWZzPjxnIGlkPSJob2xkZXJfMTU4MWViMmZiOTAiPjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjRUVFRUVFIi8+PGc+PHRleHQgeD0iMTg1LjE0MDYyNSIgeT0iMjYwLjk5Njg3NSI+NTAweDUwMDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true">
-        </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-    <!-- /END THE FEATURETTES -->
-
-
-    <!-- FOOTER -->
+<!-- FOOTER -->
     <footer>
         <p class="pull-right"><a href="http://getbootstrap.com/examples/carousel/#">Back to top</a></p>
         <p>© 2016 Company, Inc. · <a href="http://getbootstrap.com/examples/carousel/#">Privacy</a> · <a href="http://getbootstrap.com/examples/carousel/#">Terms</a></p>
     </footer>
-
-</div><!-- /.container -->
-
-
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="../../../Desktop/Advanced/161101/temp;/main_files/jquery.min.js.다운로드"></script>
-<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-<script src="../../../Desktop/Advanced/161101/temp;/main_files/bootstrap.min.js.다운로드"></script>
-<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-<script src="../../../Desktop/Advanced/161101/temp;/main_files/holder.min.js.다운로드"></script>
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="../../../Desktop/Advanced/161101/temp;/main_files/ie10-viewport-bug-workaround.js.다운로드"></script>
-
 
 <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" preserveAspectRatio="none" style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;"><defs><style type="text/css"></style></defs><text x="0" y="25" style="font-weight:bold;font-size:25pt;font-family:Arial, Helvetica, Open Sans, sans-serif">500x500</text></svg>
 </body>

@@ -7,129 +7,225 @@
             src="https://code.jquery.com/jquery-2.2.4.min.js"
             integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
             crossorigin="anonymous"></script>
-<!-- Latest compiled and minified CSS -->
+    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<!-- Optional theme -->
+    <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-<!-- Latest compiled and minified JavaScript -->
+    <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<!-- Custom styles for this template -->
+    <!-- Custom styles for this template -->
     <link href="../CSS/search.css" rel="stylesheet">
     <script src="../JS/search.js"></script>
 </head>
+
 <body>
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.html">Book Management System</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li class="Search">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Search <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li class="dropdown-header">For Text</li>
-                        <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;Title</a></li>
-                        <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;Author</a></li>
-                        <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;Translator</a></li>
-                        <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;Publisher</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li class="dropdown-header">For Code</li>
-                        <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;ISBN</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li class="dropdown-header">Nav header</li>
-                        <li><a href="http://getbootstrap.com/examples/carousel/#">Separated link</a></li>
-                        <li><a href="http://getbootstrap.com/examples/carousel/#">One more separated link</a></li>
-                    </ul>
-                </li>
-                <li><a href="list.html">List</a></li>
-                <li><a href="http://getbootstrap.com/examples/carousel/#contact">Contact</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+<!--------------------------------------------------------------------------------------------------------------->
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-            <ul class="nav nav-sidebar">
-                <li class="active"><a href="search.html">Search For<span class="sr-only">(current)</span></a></li>
-                <li><a href="search_ISBN.html"> &nbsp;&nbsp;&nbsp;&nbsp; ISBN</a></li>
-                <li><a href="#"> &nbsp;&nbsp;&nbsp;&nbsp; Title</a></li>
-                <li><a href="#"> &nbsp;&nbsp;&nbsp;&nbsp; Author</a></li>
-                <li><a href="#"> &nbsp;&nbsp;&nbsp;&nbsp; Translator</a></li>
-                <li><a href="#"> &nbsp;&nbsp;&nbsp;&nbsp; Publisher</a></li>
-            </ul>
-        </div>
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-
-          <span class="navbar-form navbar-right">
-            <input type="text" id = "keyword" class="form-control" placeholder="Search..." onkeyup="searchBook()">
-          </span>
-
-            <h1 class="page-header">Best Seller</h1>
-
-            <div class="row placeholders">
-                <div class="col-xs-6 col-sm-3 placeholder">
-                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-                         width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-                    <h4>Label</h4>
-                    <span class="text-muted">Something else</span>
-                </div>
-                <div class="col-xs-6 col-sm-3 placeholder">
-                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-                         width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-                    <h4>Label</h4>
-                    <span class="text-muted">Something else</span>
-                </div>
-                <div class="col-xs-6 col-sm-3 placeholder">
-                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-                         width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-                    <h4>Label</h4>
-                    <span class="text-muted">Something else</span>
-                </div>
-                <div class="col-xs-6 col-sm-3 placeholder">
-                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-                         width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-                    <h4>Label</h4>
-                    <span class="text-muted">Something else</span>
-                </div>
+<!--------------------------------------------------------------------------------------------------------------->
+<div class="container marketing">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Book Management System</a>
             </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <!--------------------------------------------------------------------------------------------------------------->
+                    <li><a href="#" id="button_login" data-target="#myModal" type="button" data-toggle="modal">Login</a></li>
+                    <!--------------------------------------------------------------------------------------------------------------->
+                    <li class="Search">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Search <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header">For Text</li>
+                            <li><a href="search_title.html">&nbsp;&nbsp;&nbsp;&nbsp;Title</a></li>
+                            <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;Author</a></li>
+                            <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;Translator</a></li>
+                            <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;Publisher</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">For Code</li>
+                            <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;ISBN</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">Nav header</li>
+                            <li><a href="#">Separated link</a></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="add.html">ADD</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <div id="logging"></div>
+            </div>
+        </div>
+    </nav>
 
-            <h2 class="sub-header">Book List</h2>
-            <div class="table-responsive">
-                <table class="table table-striped">
-                    <thead>
-                    <tr>
-                        <th>Image</th>
-                        <th>Title</th>
-                        <th>Author</th>
-                        <th><a href="#" onclick="mySort()">Price</a></th>
-                        <th>Update</th>
-                        <th>Delete</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td id="img"><img width="80" /></td>
-                        <td id="title"></td>
-                        <td id="author"></td>
-                        <td id="price"></td>
-                        <td id="update"></td>
-                        <td id="delete"></td>
-                    </tr>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li class="active"><a href="search_title.html">Search For<span class="sr-only">(current)</span></a></li>
+                    <li><a href="search_title.html"> &nbsp;&nbsp;&nbsp;&nbsp; Title</a></li>
+                    <li><a href="#"> &nbsp;&nbsp;&nbsp;&nbsp; Author</a></li>
+                    <li><a href="#"> &nbsp;&nbsp;&nbsp;&nbsp; Translator</a></li>
+                    <li><a href="#"> &nbsp;&nbsp;&nbsp;&nbsp; Publisher</a></li>
+                    <li><a href="#"> &nbsp;&nbsp;&nbsp;&nbsp; ISBN</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <h1 class="page-header">Best Seller</h1>
+                <div class="row placeholders">
+                    <div class="col-xs-6 col-sm-3 placeholder">
+                        <img src="http://t1.daumcdn.net/book/KOR9788994120911?moddttm=20160730060434"
+                             width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+                        <br>
+                        <br>
+                        <br>
+                        <h4>Essay</h4>
+                        <h3>직장인 4대 비극</h3>
+                    </div>
+                    <div class="col-xs-6 col-sm-3 placeholder">
+                        <img src="http://t1.daumcdn.net/book/KOR9788994120935?moddttm=20161102080722"
+                             width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+                        <br>
+                        <br>
+                        <br>
+                        <h4>Business</h4>
+                        <h3>디즈니 유니버시티</h3>
+                    </div>
+                    <div class="col-xs-6 col-sm-3 placeholder">
+                        <img src="http://t1.daumcdn.net/book/KOR9788994120942?moddttm=20161027060434"
+                             width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+                        <br>
+                        <br>
+                        <br>
+                        <h4>Self-development</h4>
+                        <h3>기획은 퍼즐이다</h3>
+                    </div>
+                    <div class="col-xs-6 col-sm-3 placeholder">
+                        <img src="http://t1.daumcdn.net/book/KOR9788968481475?moddttm=20161104052232"
+                             width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <h4>Technology</h4>
+                        <h3>이것이 자바다</h3>
+                    </div>
+                </div>
 
-                    </tbody>
-                </table>
+                <h2 class="sub-header">Book List (Search For 'Title') </h2>
+                <!-- SearchBox -->
+                <div class="slinput" ng-init="">
+                    <i class="fa fa-search left-icon"></i>
+                    <input id="keyword_title" placeholder="Input 'Title' Here" ng-model="searchInputVal" onkeyup="searchBook()"/>
+                    <i ng-class="{'fa' : true, 'fa-close' : true, 'right-icon' : true, active : (searchInputVal.length > 0)}"
+                       ng-click="searchInputVal = ''"></i>
+                </div>
+                <br>
+                <!---->
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th><a href="#" onclick="mySort()">Price</a></th>
+                            <th>Detail</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                            <th>Comment</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td id="img"><img width="80" /></td>
+                            <td id="title"></td>
+                            <td id="author"></td>
+                            <td id="price"></td>
+                            <td id="detail"></td>
+                            <td id="update"></td>
+                            <td id="delete"></td>
+                            <td id="comment"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
 </div>
+<!--B-- Modal1 window ---->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="myModalLabel">Login</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="username">아이디</label>
+                    <input name="user_id" value='' id="username" placeholder="Username" type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="password">비밀번호</label>
+                    <input name="password" id="password" value='' placeholder="Password" type="password" class="form-control" />
+                </div>
+                <!---->
+                <div class="form-group">
+                    <input type="button" id="loginbtn" class="btn btn-default btn-login-submit btn-block m-t-md" value="Login" onclick="myLogin()"/>
+                </div>
+                <div class="form-group">
+                    <a href="createuser.html" class="btn btn-default btn-block m-t-md"> 회원가입</a>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id ="" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--E-- Modal window ---->
+
+<!--B-- Modal2 window ---->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="myModalLabel">Login</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="username">아이디</label>
+                    <input type="text"      name="user_id" id="username" value='' placeholder="Username" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="password">비밀번호</label>
+                    <input type="password"  name="password" id="password" value='' placeholder="Password" class="form-control" />
+                </div>
+                <!---->
+                <div class="form-group">
+                    <input type="button" id="loginbtn" class="btn btn-default btn-login-submit btn-block m-t-md" value="Login" onclick="myLogin()"/>
+                </div>
+                <div class="form-group">
+                    <a href="createuser.html" class="btn btn-default btn-block m-t-md"> 회원가입</a>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--E-- Modal window ---->
+
 </body>
 </html>

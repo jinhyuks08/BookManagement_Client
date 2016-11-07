@@ -1,10 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta charset="utf-8">
+    <title>Book Management System</title>
+    <script
+            src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Custom styles for this template -->
+    <link href="../CSS/search.css" rel="stylesheet">
+    <script src="../JS/search.js"></script>
 </head>
+
 <body>
-$END$
+<div class="container marketing">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Book Management System</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <!--------------------------------------------------------------------------------------------------------------->
+                    <li><a href="#" id="button_login" data-target="#myModal" type="button"  data-toggle="modal">Login</a></li>
+                    <!--------------------------------------------------------------------------------------------------------------->
+                    <li class="Search">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Search <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header">For Text</li>
+                            <li><a href="search_title.html">&nbsp;&nbsp;&nbsp;&nbsp;Title</a></li>
+                            <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;Author</a></li>
+                            <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;Translator</a></li>
+                            <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;Publisher</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">For Code</li>
+                            <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;ISBN</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">Nav header</li>
+                            <li><a href="#">Separated link</a></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="add.html">ADD</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <div id="logging"></div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="col-lg-6">
+    <form role="form">
+        <div class="insdata">
+            <h2>Sign Up</h2>
+            <label class="control-label">ID</label>
+            <input type="text" class="form-control" id="uid" placeholder="*ID을 입력하세요." />
+            <label class="control-label">Name</label>
+            <input type="text" class="form-control" id="uname" placeholder="*성명을 입력하세요." />
+            <label class="control-label">Password</label>
+            <input type="password" class="form-control" id="upw" placeholder="*비밀번호를 입력하세요." />
+            <label class="control-label">Password</label>
+            <input type="password" class="form-control" id="upwc" placeholder="*비밀번호를 확인하세요." />
+            <label class="control-label">E-mail</label>
+            <input type="text" class="form-control" id="ucount"  placeholder="e-mail주소를 입력하세요." />
+        </div>
+        <br>
+        <div>
+            <center>
+                <input id="wrapper" type="button" value="Sign Up" onclick="myUser()" />
+            </center>
+        </div>
+    </form>
+</div>
+<!--B-- Modal window ---->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="myModalLabel">Login</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="username">아이디</label>
+                    <input name="user_id" value='' id="username" placeholder="Username" type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="password">비밀번호</label>
+                    <input name="password" id="password" value='' placeholder="Password" type="password" class="form-control" />
+                </div>
+                <!---->
+                <div class="form-group">
+                    <input type="button" id="loginbtn" class="btn btn-default btn-login-submit btn-block m-t-md" value="Login" onclick="myLogin()"/>
+                </div>
+                <div class="form-group">
+                    <a href="createuser.html" class="btn btn-default btn-block m-t-md"> 회원가입</a>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id ="" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--E-- Modal window ---->
 </body>
 </html>

@@ -1,6 +1,31 @@
 
 var resultArr = [];
 var clickcount = 0;
+var myid = "";
+
+window.onload = function () {
+    $.ajax(
+        {
+            url: "http://localhost:7070/book/sessionchk",
+            type: "GET",
+            dataType: "jsonp",
+            jsonp: "callback",
+
+            data: {},
+
+            success: function (result) {
+                myid = result[0].id;
+                alert(myid);
+            },
+
+            error: function () {
+//                alert("비회원");
+            }
+
+        });
+
+};
+
 //
 $(document).ready(function() {
     // Handler for .ready() called.
@@ -562,4 +587,7 @@ var Confirm = {
         $(self.modalMainId).css('display', 'none');
     }
 };
+
+//session
+
 
